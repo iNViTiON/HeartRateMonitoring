@@ -1,5 +1,10 @@
-<div class="cascadia" (click)="connectHr()">
-  <ng-container *rxLet="device$; rxSuspense: clickToConnect">
+<div class="cascadia" (click)="singleClick()">
+  <ng-container
+    *rxLet="
+      device$;
+      rxSuspense: isStandalone ? clickToConnect : clickToStandalone
+    "
+  >
     <ng-container *rxLet="heartRate$ as hr; rxSuspense: connecting">
       HR: {{ hr.heartRate }} BPM <br />
       {{ hr.contactDetected ? "Wearing" : "Not wearing" }}
@@ -16,6 +21,7 @@
     </ng-container>
   </ng-container>
   <ng-template #clickToConnect>Click to connect</ng-template>
+  <ng-template #clickToStandalone>Click to launch standalone app</ng-template>
   <ng-template #connecting>Connecting…</ng-template>
   <ng-template #dash>—</ng-template>
 </div>
