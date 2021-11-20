@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 import type { Observable } from 'rxjs';
 import { filter, map, pairwise, ReplaySubject, share } from 'rxjs';
 import { BluetoothHRService, HeartRateData } from './bluetooth-hr.service';
@@ -18,7 +19,11 @@ export class AppComponent {
 
   public connectHr = () => this.bhr.connectHr();
 
-  constructor(private bhr: BluetoothHRService) {
+  constructor(private titleService: Title, private bhr: BluetoothHRService) {
+    this.titleService.setTitle(
+      this.isStandalone ? 'Heart Rate Monitor' : 'Heart Rate Monitor Launcher'
+    );
+
     this.device$ = this.bhr.device$;
     this.heartRate$ = this.bhr.heartRate$;
     this.heartRateLocation$ = this.bhr.location$;
