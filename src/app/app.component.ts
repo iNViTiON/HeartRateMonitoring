@@ -12,7 +12,7 @@ import { BluetoothHRService, HeartRateData } from './bluetooth-hr.service';
 export class AppComponent {
   public isStandalone = !window.menubar.visible;
 
-  public device$: Observable<string>;
+  public device$: Observable<BluetoothDevice>;
   public heartRate$: Observable<HeartRateData>;
   public heartRateLocation$: Observable<string>;
   public hrv$: Observable<string>;

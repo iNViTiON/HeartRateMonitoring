@@ -1,6 +1,9 @@
+/// <reference types="web-bluetooth" />
+
 import { Injectable } from '@angular/core';
 import {
   delayWhen,
+  filter,
   from,
   fromEvent,
   map,
@@ -26,15 +29,15 @@ export class BluetoothHRService {
   };
 
   private newDevice$ = new Subject<void>();
-  public device$: Observable</*BluetoothDevice*/ any>;
-  private server$: Observable</*BluetoothRemoteGATTServer*/ any>;
-  private service$: Observable</*BluetoothRemoteGATTService*/ any>;
+  public device$: Observable<BluetoothDevice>;
+  private server$: Observable<BluetoothRemoteGATTServer>;
+  private service$: Observable<BluetoothRemoteGATTService>;
   public location$: Observable<string>;
-  public heartRate$: Observable<HeartRateData>; // FIXME: type
+  public heartRate$: Observable<HeartRateData>;
   constructor() {
     this.device$ = this.newDevice$.pipe(
       switchMap(() =>
-        (navigator as any).bluetooth.requestDevice({
+        navigator.bluetooth.requestDevice({
           filters: [
             {
               services: ['heart_rate'],
@@ -49,7 +52,7 @@ export class BluetoothHRService {
     );
     this.server$ = this.device$.pipe(
       map((device) => device.gatt),
-      // filter((gatt): gatt is BluetoothRemoteGATTServer => gatt !== undefined),
+      filter((gatt): gatt is BluetoothRemoteGATTServer => gatt !== undefined),
       switchMap((gatt) => gatt.connect()),
       share({
         connector: () => new ReplaySubject(1),
@@ -65,7 +68,6 @@ export class BluetoothHRService {
     );
     this.location$ = this.service$.pipe(
       switchMap((service) => service.getCharacteristic('body_sensor_location')),
-      // delayWhen((characteristic) => from(characteristic.startNotifications())),
       switchMap((characteristic: any) => characteristic.readValue()),
       map(
         (value: any) => this.sensorLocationDict[value.getUint8(0)] ?? 'Unknown'
