@@ -75,7 +75,8 @@
               "browserTarget": "HeartRateMonitoring:build:production"
             },
             "development": {
-              "browserTarget": "HeartRateMonitoring:build:development"
+              "browserTarget": "HeartRateMonitoring:build:development",
+              "hmr": true
             }
           },
           "defaultConfiguration": "development"

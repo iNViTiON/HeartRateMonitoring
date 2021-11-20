@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { LetModule, PushModule, ViewportPrioModule } from '@rx-angular/template';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -9,8 +10,11 @@ import { AppComponent } from './app.component';
     AppComponent
   ],
   imports: [
+    AppRoutingModule,
     BrowserModule,
-    AppRoutingModule
+    LetModule,
+    PushModule,
+    ViewportPrioModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
