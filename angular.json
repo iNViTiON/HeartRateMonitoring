@@ -117,7 +117,6 @@
       }
     }
   },
-  "defaultProject": "HeartRateMonitoring",
   "cli": {
     "schematicCollections": [
       "@angular-eslint/schematics"
