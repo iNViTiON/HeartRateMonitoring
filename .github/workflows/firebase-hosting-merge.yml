@@ -10,17 +10,16 @@ jobs:
   build_and_deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-
-      - name: install yarn
-        run: npm i -g yarn
-
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: "lts/*"
+          cache: "yarn"
+      - run: corepack enable
       - name: install dependencies
         run: yarn
-
       - name: lint
         run: yarn ng lint
-
       - name: build
         run: yarn ng build
 
