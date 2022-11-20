@@ -1,26 +1,42 @@
-import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { Title } from '@angular/platform-browser';
+import { RX_RENDER_STRATEGIES_CONFIG } from '@rx-angular/cdk/render-strategies';
+import { LetModule } from '@rx-angular/template/let';
+import { PushModule } from '@rx-angular/template/push';
 import type { Observable } from 'rxjs';
 import { filter, map, pairwise, ReplaySubject, share } from 'rxjs';
 import { BluetoothHRService, HeartRateData } from './bluetooth-hr.service';
 
 @Component({
+  standalone: true,
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  providers: [
+    {
+      provide: RX_RENDER_STRATEGIES_CONFIG,
+      useValue: {
+        primaryStrategy: 'noop',
+        patchZone: false,
+      },
+    },
+  ],
+  imports: [CommonModule, LetModule, PushModule],
 })
 export class AppComponent {
-  public isStandalone = !window.menubar.visible;
+  public readonly isStandalone = !window.menubar.visible;
 
-  public device$: Observable<BluetoothDevice>;
-  public heartRate$: Observable<HeartRateData>;
-  public heartRateLocation$: Observable<string>;
-  public hrv$: Observable<string>;
+  public readonly device$: Observable<BluetoothDevice>;
+  public readonly heartRate$: Observable<HeartRateData>;
+  public readonly heartRateLocation$: Observable<string>;
+  public readonly hrv$: Observable<string>;
+  private readonly bhr = inject(BluetoothHRService);
+  private readonly connectHr = () => this.bhr.connectHr();
 
-  public connectHr = () => this.bhr.connectHr();
-
-  constructor(private titleService: Title, private bhr: BluetoothHRService) {
-    this.titleService.setTitle(
+  constructor() {
+    inject(Title).setTitle(
       this.isStandalone ? 'Heart Rate Monitor' : 'Heart Rate Monitor Launcher'
     );
 
@@ -41,7 +57,7 @@ export class AppComponent {
     );
   }
 
-  public standalone() {
+  private standalone() {
     window.open(
       window.location.href,
       'null',
