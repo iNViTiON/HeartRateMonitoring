@@ -18,15 +18,15 @@ import type { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class BluetoothHRService {
-  private sensorLocationDict: Record<number, string> = {
-    0: 'Other',
-    1: 'Chest',
-    2: 'Wrist',
-    3: 'Finger',
-    4: 'Hand',
-    5: 'Ear Lobe',
-    6: 'Foot',
-  };
+  private sensorLocationDict: Map<number, string> = new Map<number, string>([
+    [0, 'Other'],
+    [1, 'Chest'],
+    [2, 'Wrist'],
+    [3, 'Finger'],
+    [4, 'Hand'],
+    [5, 'Ear Lobe'],
+    [6, 'Foot'],
+  ]);
 
   private newDevice$ = new Subject<void>();
   public device$: Observable<BluetoothDevice>;
@@ -70,7 +70,7 @@ export class BluetoothHRService {
       switchMap((service) => service.getCharacteristic('body_sensor_location')),
       switchMap((characteristic: any) => characteristic.readValue()),
       map(
-        (value: any) => this.sensorLocationDict[value.getUint8(0)] ?? 'Unknown'
+        (value: any) => this.sensorLocationDict.get(value.getUint8(0)) ?? 'Unknown'
       ),
       share({
         connector: () => new ReplaySubject(1),
