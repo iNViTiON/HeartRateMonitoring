@@ -1,3 +1,5 @@
+/// <reference types="w3c-web-usb" />
+
 import { Component } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import type { Observable } from 'rxjs';
@@ -50,6 +52,21 @@ export class AppComponent {
   }
 
   public singleClick() {
-    (this.isStandalone ? this.connectHr : this.standalone)();
+    this.usb();
+    // (this.isStandalone ? this.connectHr : this.standalone)();
+  }
+
+  // windows need zadig https://zadig.akeo.ie/
+  private async usb() {
+    const device = await navigator.usb.requestDevice({
+      filters: [
+        { vendorId: 0xfcf, productId: 0x1008 },
+        { vendorId: 0xfcf, productId: 0x1009 },
+      ],
+    });
+    (window as any)['d'] = device;
+    await device.open();
+    await device.selectConfiguration(1);
+    await device.claimInterface(0);
   }
 }

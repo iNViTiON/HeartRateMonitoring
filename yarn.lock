@@ -2145,6 +2145,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/w3c-web-usb@npm:^1.0.5":
+  version: 1.0.5
+  resolution: "@types/w3c-web-usb@npm:1.0.5"
+  checksum: 6f324d8c3b5f29f97a75f1328f997c8fbe2e8f103264f58458476037e761e3eecc2b68f4581ecccbd4a1306fc506110c43630f1dc31f0f2c232ad32d64aba2ed
+  languageName: node
+  linkType: hard
+
 "@types/web-bluetooth@npm:^0.0.11":
   version: 0.0.11
   resolution: "@types/web-bluetooth@npm:0.0.11"
@@ -5034,6 +5041,7 @@ __metadata:
     "@rx-angular/template": 1.0.0-beta.29
     "@types/jasmine": ~3.10.0
     "@types/node": ^12.11.1
+    "@types/w3c-web-usb": ^1.0.5
     "@types/web-bluetooth": ^0.0.11
     "@typescript-eslint/eslint-plugin": 5.3.0
     "@typescript-eslint/parser": 5.3.0
