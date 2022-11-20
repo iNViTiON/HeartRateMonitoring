@@ -18,6 +18,8 @@ jobs:
         run: yarn
       - name: lint
         run: yarn ng lint
+      - name: build
+        run: yarn ng build
 
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
