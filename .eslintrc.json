@@ -3,6 +3,9 @@
   "ignorePatterns": [
     "projects/**/*"
   ],
+  "extends": [
+    "plugin:@rx-angular/zoneless"
+  ],
   "overrides": [
     {
       "files": [

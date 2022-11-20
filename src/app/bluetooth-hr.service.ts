@@ -85,6 +85,7 @@ export class BluetoothHRService {
         from(characteristic.startNotifications())
       ),
       switchMap((characteristic) =>
+        // eslint-disable-next-line @rx-angular/no-zone-critical-rxjs-creation-apis
         fromEvent(characteristic, 'characteristicvaluechanged')
       ),
       map((event: any) => event.target?.value),
