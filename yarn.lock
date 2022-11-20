@@ -32,7 +32,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@angular-devkit/build-angular@npm:~14.2.10":
+"@angular-devkit/build-angular@npm:^14.2.10":
   version: 14.2.10
   resolution: "@angular-devkit/build-angular@npm:14.2.10"
   dependencies:
@@ -259,7 +259,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@angular/animations@npm:~14.2.11":
+"@angular/animations@npm:^14.2.11":
   version: 14.2.11
   resolution: "@angular/animations@npm:14.2.11"
   dependencies:
@@ -270,7 +270,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@angular/cli@npm:~14.2.10":
+"@angular/cli@npm:^14.2.10":
   version: 14.2.10
   resolution: "@angular/cli@npm:14.2.10"
   dependencies:
@@ -300,7 +300,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@angular/common@npm:~14.2.11":
+"@angular/common@npm:^14.2.11":
   version: 14.2.11
   resolution: "@angular/common@npm:14.2.11"
   dependencies:
@@ -312,7 +312,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@angular/compiler-cli@npm:~14.2.11":
+"@angular/compiler-cli@npm:^14.2.11":
   version: 14.2.11
   resolution: "@angular/compiler-cli@npm:14.2.11"
   dependencies:
@@ -337,7 +337,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@angular/compiler@npm:~14.2.11":
+"@angular/compiler@npm:^14.2.11":
   version: 14.2.11
   resolution: "@angular/compiler@npm:14.2.11"
   dependencies:
@@ -351,7 +351,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@angular/core@npm:~14.2.11":
+"@angular/core@npm:^14.2.11":
   version: 14.2.11
   resolution: "@angular/core@npm:14.2.11"
   dependencies:
@@ -363,7 +363,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@angular/forms@npm:~14.2.11":
+"@angular/forms@npm:^14.2.11":
   version: 14.2.11
   resolution: "@angular/forms@npm:14.2.11"
   dependencies:
@@ -377,7 +377,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@angular/platform-browser-dynamic@npm:~14.2.11":
+"@angular/platform-browser-dynamic@npm:^14.2.11":
   version: 14.2.11
   resolution: "@angular/platform-browser-dynamic@npm:14.2.11"
   dependencies:
@@ -391,7 +391,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@angular/platform-browser@npm:~14.2.11":
+"@angular/platform-browser@npm:^14.2.11":
   version: 14.2.11
   resolution: "@angular/platform-browser@npm:14.2.11"
   dependencies:
@@ -407,7 +407,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@angular/router@npm:~14.2.11":
+"@angular/router@npm:^14.2.11":
   version: 14.2.11
   resolution: "@angular/router@npm:14.2.11"
   dependencies:
@@ -5936,22 +5936,22 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "heart-rate-monitoring@workspace:."
   dependencies:
-    "@angular-devkit/build-angular": ~14.2.10
+    "@angular-devkit/build-angular": ^14.2.10
     "@angular-eslint/builder": 14.3.0
     "@angular-eslint/eslint-plugin": 14.3.0
     "@angular-eslint/eslint-plugin-template": 14.3.0
     "@angular-eslint/schematics": 14.3.0
     "@angular-eslint/template-parser": 14.3.0
-    "@angular/animations": ~14.2.11
-    "@angular/cli": ~14.2.10
-    "@angular/common": ~14.2.11
-    "@angular/compiler": ~14.2.11
-    "@angular/compiler-cli": ~14.2.11
-    "@angular/core": ~14.2.11
-    "@angular/forms": ~14.2.11
-    "@angular/platform-browser": ~14.2.11
-    "@angular/platform-browser-dynamic": ~14.2.11
-    "@angular/router": ~14.2.11
+    "@angular/animations": ^14.2.11
+    "@angular/cli": ^14.2.10
+    "@angular/common": ^14.2.11
+    "@angular/compiler": ^14.2.11
+    "@angular/compiler-cli": ^14.2.11
+    "@angular/core": ^14.2.11
+    "@angular/forms": ^14.2.11
+    "@angular/platform-browser": ^14.2.11
+    "@angular/platform-browser-dynamic": ^14.2.11
+    "@angular/router": ^14.2.11
     "@rx-angular/cdk": 1.0.0-rc.3
     "@rx-angular/template": 1.0.0-rc.4
     "@types/jasmine": ~3.10.0
