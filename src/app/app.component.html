@@ -2,10 +2,10 @@
   <ng-container
     *rxLet="
       device$;
-      rxSuspense: isStandalone ? clickToConnect : clickToStandalone
+      suspense: isStandalone ? clickToConnect : clickToStandalone
     "
   >
-    <ng-container *rxLet="heartRate$ as hr; rxSuspense: connecting">
+    <ng-container *rxLet="heartRate$ as hr; suspense: connecting">
       HR: {{ hr.heartRate }} BPM <br />
       {{ hr.contactDetected ? "Wearing" : "Not wearing" }}
       <ng-container *rxLet="heartRateLocation$ as location">
