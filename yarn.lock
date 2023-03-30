@@ -2,7 +2,7 @@
 # Manual changes might be lost - proceed with caution!
 
 __metadata:
-  version: 7
+  version: 6
   cacheKey: 9
 
 "@ampproject/remapping@npm:2.2.0, @ampproject/remapping@npm:^2.1.0":
@@ -5567,9 +5567,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fsevents@patch:fsevents@npm%3A~2.3.2#optional!builtin<compat/fsevents>":
+"fsevents@patch:fsevents@npm%3A~2.3.2#~builtin<compat/fsevents>":
   version: 2.3.2
-  resolution: "fsevents@patch:fsevents@npm%3A2.3.2#optional!builtin<compat/fsevents>::version=2.3.2&hash=df0bf1"
+  resolution: "fsevents@patch:fsevents@npm%3A2.3.2#~builtin<compat/fsevents>::version=2.3.2&hash=18f3a7"
   dependencies:
     node-gyp: "npm:latest"
   conditions: os=darwin
@@ -5895,35 +5895,35 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "heart-rate-monitoring@workspace:."
   dependencies:
-    "@angular-devkit/architect": "npm:0.1500.5"
-    "@angular-devkit/build-angular": "npm:^15.1.0"
-    "@angular-eslint/builder": "npm:15.2.1"
-    "@angular-eslint/eslint-plugin": "npm:15.2.1"
-    "@angular-eslint/eslint-plugin-template": "npm:15.2.1"
-    "@angular-eslint/schematics": "npm:15.2.1"
-    "@angular-eslint/template-parser": "npm:15.2.1"
-    "@angular/animations": "npm:^15.2.5"
-    "@angular/cli": "npm:^15.2.4"
-    "@angular/common": "npm:^15.2.5"
-    "@angular/compiler": "npm:^15.2.5"
-    "@angular/compiler-cli": "npm:^15.2.5"
-    "@angular/core": "npm:^15.2.5"
-    "@angular/forms": "npm:^15.2.5"
-    "@angular/platform-browser": "npm:^15.2.5"
-    "@angular/platform-browser-dynamic": "npm:^15.2.5"
-    "@angular/router": "npm:^15.2.5"
-    "@rx-angular/cdk": "npm:2.0.0"
-    "@rx-angular/eslint-plugin": "npm:^1.0.0"
-    "@rx-angular/template": "npm:2.0.0"
-    "@types/node": "npm:^18.11.18"
-    "@types/web-bluetooth": "npm:^0.0.16"
-    "@typescript-eslint/eslint-plugin": "npm:^5.48.1"
-    "@typescript-eslint/parser": "npm:^5.48.1"
-    eslint: "npm:^8.31.0"
-    rxjs: "npm:~7.8.0"
-    tslib: "npm:^2.4.1"
-    typescript: "npm:~4.8.4"
-    zone.js: "npm:^0.12.0"
+    "@angular-devkit/architect": 0.1500.5
+    "@angular-devkit/build-angular": ^15.1.0
+    "@angular-eslint/builder": 15.2.1
+    "@angular-eslint/eslint-plugin": 15.2.1
+    "@angular-eslint/eslint-plugin-template": 15.2.1
+    "@angular-eslint/schematics": 15.2.1
+    "@angular-eslint/template-parser": 15.2.1
+    "@angular/animations": ^15.2.5
+    "@angular/cli": ^15.2.4
+    "@angular/common": ^15.2.5
+    "@angular/compiler": ^15.2.5
+    "@angular/compiler-cli": ^15.2.5
+    "@angular/core": ^15.2.5
+    "@angular/forms": ^15.2.5
+    "@angular/platform-browser": ^15.2.5
+    "@angular/platform-browser-dynamic": ^15.2.5
+    "@angular/router": ^15.2.5
+    "@rx-angular/cdk": 2.0.0
+    "@rx-angular/eslint-plugin": ^1.0.0
+    "@rx-angular/template": 2.0.0
+    "@types/node": ^18.11.18
+    "@types/web-bluetooth": ^0.0.16
+    "@typescript-eslint/eslint-plugin": ^5.48.1
+    "@typescript-eslint/parser": ^5.48.1
+    eslint: ^8.31.0
+    rxjs: ~7.8.0
+    tslib: ^2.4.1
+    typescript: ~4.8.4
+    zone.js: ^0.12.0
   languageName: unknown
   linkType: soft
 
@@ -7205,16 +7205,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"minimatch@npm:^3.0.4":
-  version: 3.0.4
-  resolution: "minimatch@npm:3.0.4"
-  dependencies:
-    brace-expansion: "npm:^1.1.7"
-  checksum: 2579a9237b4947989dd0ebf3fbf6975c06d6fb676e83dde945ed94f18fa09485caa415dc12ae8119132325d533a5872cbf060530a49f236d65e2bcce95a9b23f
-  languageName: node
-  linkType: hard
-
-"minimatch@npm:^3.0.5, minimatch@npm:^3.1.2":
+"minimatch@npm:^3.0.4, minimatch@npm:^3.0.5, minimatch@npm:^3.1.2":
   version: 3.1.2
   resolution: "minimatch@npm:3.1.2"
   dependencies:
@@ -8682,26 +8673,26 @@ __metadata:
   languageName: node
   linkType: hard
 
-"resolve@patch:resolve@npm%3A1.22.1#optional!builtin<compat/resolve>":
+"resolve@patch:resolve@npm%3A1.22.1#~builtin<compat/resolve>":
   version: 1.22.1
-  resolution: "resolve@patch:resolve@npm%3A1.22.1#optional!builtin<compat/resolve>::version=1.22.1&hash=c3c19d"
+  resolution: "resolve@patch:resolve@npm%3A1.22.1#~builtin<compat/resolve>::version=1.22.1&hash=07638b"
   dependencies:
     is-core-module: "npm:^2.9.0"
     path-parse: "npm:^1.0.7"
     supports-preserve-symlinks-flag: "npm:^1.0.0"
   bin:
     resolve: bin/resolve
-  checksum: a6f214b97d932445796f78dab7a898ec78966327e0d6cb571f90b6ac0f3b3347bf6bab0a071d899bfdc316b26ed845f6655310b38b8f6ee4da5272a0c5ecef85
+  checksum: 8/5656f4d0bedcf8eb52685c1abdf8fbe73a1603bb1160a24d716e27a57f6cecbe2432ff9c89c2bd57542c3a7b9d14b1882b73bfe2e9d7849c9a4c0b8b39f02b8b
   languageName: node
   linkType: hard
 
-"resolve@patch:resolve@npm%3A^1.14.2#optional!builtin<compat/resolve>":
+"resolve@patch:resolve@npm%3A^1.14.2#~builtin<compat/resolve>":
   version: 1.20.0
-  resolution: "resolve@patch:resolve@npm%3A1.20.0#optional!builtin<compat/resolve>::version=1.20.0&hash=c3c19d"
+  resolution: "resolve@patch:resolve@npm%3A1.20.0#~builtin<compat/resolve>::version=1.20.0&hash=07638b"
   dependencies:
     is-core-module: "npm:^2.2.0"
     path-parse: "npm:^1.0.6"
-  checksum: 976d9e2ccefbecc754be43a1d1a6a5e689339ac8fb5c0b2ad0bcf7b78d7ec3da938645efb9d9986c66e760306394ea1a3cdae84aa5d7078714f88a020a5190f2
+  checksum: 8/a0dd7d16a8e47af23afa9386df2dff10e3e0debb2c7299a42e581d9d9b04d7ad5d2c53f24f1e043f7b3c250cbdc71150063e53d0b6559683d37f790b7c8c3cd5
   languageName: node
   linkType: hard
 
@@ -9699,13 +9690,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@npm%3A~4.8.4#optional!builtin<compat/typescript>":
+"typescript@patch:typescript@~4.8.4#~builtin<compat/typescript>":
   version: 4.8.4
-  resolution: "typescript@patch:typescript@npm%3A4.8.4#optional!builtin<compat/typescript>::version=4.8.4&hash=1a91c8"
+  resolution: "typescript@patch:typescript@npm%3A4.8.4#~builtin<compat/typescript>::version=4.8.4&hash=a1c5e5"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: f6e45be090c6971bf57d07481cb7bd896303ffaee35b5a52a3418908d3cd252b20f5d25b5b1ebaf5c52754f9802421542b4aa70093744cb6d6b306936b5053bb
+  checksum: 8/563a0ef47abae6df27a9a3ab38f75fc681f633ccf1a3502b1108e252e187787893de689220f4544aaf95a371a4eb3141e4a337deb9895de5ac3c1ca76430e5f0
   languageName: node
   linkType: hard
 
