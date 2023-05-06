@@ -7,7 +7,8 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "lint": "ng lint",
-    "test": "echo TODO: add Jest & Playwright"
+    "test": "echo TODO: add Jest & Playwright",
+    "volta-update": "volta pin node@latest yarn@3 && yarn install --mode=update-lockfile"
   },
   "private": true,
   "dependencies": {
@@ -44,7 +45,7 @@
     "typescript": "~4.8.4"
   },
   "volta": {
-    "node": "18.15.0",
-    "yarn": "4.0.0-rc.42"
+    "node": "20.1.0",
+    "yarn": "3.5.1"
   }
 }
